@@ -12,7 +12,7 @@ extends 'Search::GIN::Extract::Callback';
 use namespace::autoclean;
 
 has '+extract' => (
-  default  => sub {
+  default  => sub { sub {
     my ( $object, $self, @args ) = @_;
     return {} unless blessed $object;
     return {} unless $object->can('does');
@@ -23,7 +23,7 @@ has '+extract' => (
       return {};
     }
     return $result;
-  }
+  } }
 );
 
 1;
