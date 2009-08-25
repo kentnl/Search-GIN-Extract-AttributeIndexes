@@ -1,0 +1,25 @@
+---
+abstract: 'Automatically collect index metadata from MooseX::AttributeIndexes consuming models.'
+author:
+  - 'Kent Fredric <kentnl@cpan.org>'
+generated_by: 'Dist::Zilla::Plugin::MetaYAML version 1.092310'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Search-GIN-Extract-AttributeIndexes
+provides:
+  Search::GIN::Extract::AttributeIndexes:
+    file: lib/Search/GIN/Extract/AttributeIndexes.pm
+    version: 0.01000011
+requires:
+  Moose: 0.89
+  MooseX::AttributeIndexes: 0.01000300
+  MooseX::Types::Moose: 0
+  Search::GIN: 0.03
+  Test::More: 0.92
+  Test::use::ok: 0.02
+  namespace::autoclean: 0.08
+resources:
+  repository: http://github.com/kentfredric/Search-GIN-Extract-AttributeIndexes
+version: 0.01000011

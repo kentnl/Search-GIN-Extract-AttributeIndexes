@@ -1,0 +1,58 @@
+NAME
+    Search::GIN::Extract::AttributeIndexes - Automatically collect index
+    metadata from MooseX::AttributeIndexes consuming models.
+
+VERSION
+    version 0.01000011
+
+SYNOPSIS
+  On your models
+      use MooseX::Declare;
+
+      class Model::Item {
+        use MooseX::Types::Moose qw(:all ):
+        use MooseX::AttributeIndexes;
+
+        has 'attr' => (
+          isa => Str,
+          is => 'rw',
+          indexed => 1
+        );
+        has 'attr_bar' => (
+          isa => Str,
+          is => 'rw',
+          primary_index => 1
+        );
+      }
+
+  In KiokuX::Model extensions
+      use MooseX::Declare;
+
+      class Foo extends KiokuX::Model {
+        use Search::GIN::Extract::AttributeIndexes;
+
+        around _build_connect_args ( Any @args ) {
+
+          my $args = $self->$orig( @args );
+          push @{ $args }, extract => Search::GIN::Extract::AttributeIndexes->new();
+          return $args;
+
+        }
+      }
+
+  In Instantiations of KiokuDB
+      my $dir = KiouDB->new(
+        backend => KiokuDB::Backend::BDB::GIN->new(
+          extract => Search::GIN::Extract::AttributeIndexes->new()
+        )
+      );
+
+AUTHOR
+      Kent Fredric <kentnl@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2009 by Kent Fredric.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

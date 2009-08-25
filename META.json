@@ -1,0 +1,32 @@
+{
+   "resources" : {
+      "repository" : "http://github.com/kentfredric/Search-GIN-Extract-AttributeIndexes"
+   },
+   "generated_by" : "Dist::Zilla::Plugin::MetaJSON version 1.092310",
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "version" : "0.01000011",
+   "name" : "Search-GIN-Extract-AttributeIndexes",
+   "author" : [
+      "Kent Fredric <kentnl@cpan.org>"
+   ],
+   "license" : "perl",
+   "provides" : {
+      "Search::GIN::Extract::AttributeIndexes" : {
+         "version" : "0.01000011",
+         "file" : "lib/Search/GIN/Extract/AttributeIndexes.pm"
+      }
+   },
+   "requires" : {
+      "Test::More" : "0.92",
+      "MooseX::Types::Moose" : "0",
+      "namespace::autoclean" : "0.08",
+      "Test::use::ok" : "0.02",
+      "MooseX::AttributeIndexes" : "0.01000300",
+      "Moose" : "0.89",
+      "Search::GIN" : "0.03"
+   },
+   "abstract" : "Automatically collect index metadata from MooseX::AttributeIndexes consuming models."
+}
