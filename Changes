@@ -1,6 +1,8 @@
 Revision history for Search-GIN-Extract-AttributeIndexes
 
 {{$NEXT}}
+
+0.01059819 2011-04-03T17:39:44Z
  [Dependencies::Build]
  - Now mandates Module::Build 0.3601
 
