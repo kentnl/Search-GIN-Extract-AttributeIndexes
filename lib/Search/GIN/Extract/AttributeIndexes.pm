@@ -2,8 +2,9 @@ use strict;
 use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
-our $VERSION = '0.01000011';
-
+BEGIN {
+  $Search::GIN::Extract::AttributeIndexes::VERSION = '0.01059819';
+}
 
 use Moose;
 
@@ -38,7 +39,6 @@ __PACKAGE__->meta->make_immutable;
 
 
 __END__
-
 =pod
 
 =head1 NAME
@@ -47,7 +47,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 =head1 VERSION
 
-version 0.01000011
+version 0.01059819
 
 =head1 SYNOPSIS
 
@@ -97,15 +97,14 @@ version 0.01000011
 
 =head1 AUTHOR
 
-  Kent Fredric <kentnl@cpan.org>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Kent Fredric.
+This software is copyright (c) 2011 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 

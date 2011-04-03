@@ -1,5 +1,44 @@
 Revision history for Search-GIN-Extract-AttributeIndexes
 
-0.01000011 2009-08-25 09:57:18 UTC
-          First version.
+0.01059819 2011-04-03T17:39:44Z
+ [Dependencies::Build]
+ - Now mandates Module::Build 0.3601
+
+ [Dependencies::Devel]
+ - Advertises Bundle information in META.
+
+ [Dependencies::Runtime]
+ - Adds Carp
+ - Adds Scalar::Util
+ - Adds Search::GIN::Extract::Callback
+ - Drops Search::GIN
+ - Drops Test::use::ok
+ - Drops MooseX::AttributeIndexes
+ - Drops MooseX::Types
+ - Drops Test::More
+
+ [Dependencies::Test]
+ - Adds Test::More 0.96
+ - Adds MooseX::Types::Moose
+ - Adds Data::Dump
+ - Adds English
+ - Adds File::Find
+ - Adds File::Temp
+ - Adds MooseX::AttributeIndexes
+
+ [Packaging]
+ - Update toolchain.
+ - Use @Author::KENTNL
+ - Remove hand-coded xt/kwalitee and xt/critic and load tests.
+ - Ship .perltidyrc
+ - Rename perlcriticrc to perlcritic.rc
+ - Update Copyright licenses.
+ - No longer ship EUMM build.
+ - Add generated tests: CPANChanges, EOL, Kwalitee, DistMeta,
+   ReportVersions::Tiny, Compile.
+ - Add gitignore.
+ - Add weaver.ini
+
+0.01000011 2009-08-25T09:57:18Z
+ - First version.
 
