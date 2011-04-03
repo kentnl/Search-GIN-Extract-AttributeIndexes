@@ -24,7 +24,7 @@ my %module_build_args = (
     'Kent Fredric <kentnl@cpan.org>'
   ],
   'dist_name' => 'Search-GIN-Extract-AttributeIndexes',
-  'dist_version' => '0.01059819',
+  'dist_version' => '1.0.0',
   'license' => 'perl',
   'module_name' => 'Search::GIN::Extract::AttributeIndexes',
   'recommends' => {},

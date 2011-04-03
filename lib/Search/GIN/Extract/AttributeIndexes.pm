@@ -3,7 +3,7 @@ use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
 BEGIN {
-  $Search::GIN::Extract::AttributeIndexes::VERSION = '0.01059819';
+  $Search::GIN::Extract::AttributeIndexes::VERSION = '1.0.0';
 }
 
 use Moose;
@@ -47,7 +47,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 =head1 VERSION
 
-version 0.01059819
+version 1.0.0
 
 =head1 SYNOPSIS
 

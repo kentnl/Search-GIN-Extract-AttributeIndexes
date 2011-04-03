@@ -1,5 +1,9 @@
 Revision history for Search-GIN-Extract-AttributeIndexes
 
+1.0.0 2011-04-03T19:19:59Z
+ [Packaging]
+ - Migrating to x.y.z spec only.
+
 0.01059819 2011-04-03T17:39:44Z
  [Dependencies::Build]
  - Now mandates Module::Build 0.3601

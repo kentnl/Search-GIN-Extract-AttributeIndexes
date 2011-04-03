@@ -23,7 +23,7 @@ name: Search-GIN-Extract-AttributeIndexes
 provides:
   Search::GIN::Extract::AttributeIndexes:
     file: lib/Search/GIN/Extract/AttributeIndexes.pm
-    version: 0.01059819
+    version: v1.0.0
 requires:
   Carp: 0
   Moose: 0
@@ -33,7 +33,7 @@ requires:
 resources:
   homepage: http://github.com/kentfredric/Search-GIN-Extract-AttributeIndexes/tree
   repository: git://github.com/kentfredric/Search-GIN-Extract-AttributeIndexes.git
-version: 0.01059819
+version: 1.0.0
 x_BuiltWith:
   modules:
     Carp: 1.17
@@ -61,22 +61,9 @@ x_BuiltWith:
 x_Dist_Zilla:
   plugins:
     -
-      class: Dist::Zilla::Plugin::AutoVersion::Relative
-      config:
-        Dist::Zilla::Plugin::AutoVersion::Relative:
-          format: "{{ sprintf('%d.%02d%04d%02d', $major, $minor, days, hours) }}"
-          major: 0
-          minor: 1
-          relative_to:
-            day: 25
-            hour: 10
-            minute: 0
-            month: 8
-            second: 0
-            time_zone: Pacific/Auckland
-            year: 2009
-      name: '@Author::KENTNL/AutoVersion::Relative'
-      version: 0.01037118
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: '@Author::KENTNL/Git::NextVersion'
+      version: 1.110500
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Author::KENTNL/GatherDir'
