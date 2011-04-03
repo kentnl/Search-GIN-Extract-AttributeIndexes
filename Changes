@@ -3,7 +3,22 @@ Revision history for Search-GIN-Extract-AttributeIndexes
 {{$NEXT}}
  [Packaging]
  - Update toolchain.
- - Remove hand-coded xt/kwalitee and xt/critic tests.
+ - Remove hand-coded xt/kwalitee and xt/critic and load tests.
+ - Ship .perltidyrc
+ - Rename perlcriticrc to perlcritic.rc
+ - Update Copyright licenses.
+ - No longer ship EUMM build.
+ - Add generated tests: CPANChanges, EOL, Kwalitee, DistMeta, ReportVersions::Tiny, Compile.
+
+ [Dependencies::Build]
+ - Now mandates Module::Build 0.3601
+
+ [Dependencies::Devel]
+ - Advertises Bundle information in META.
+
+ [Dependencies]
+ - Adds Carp
+ - Adds Scalar::Util
 
 0.01000011 2009-08-25T09:57:18Z
  - First version.
