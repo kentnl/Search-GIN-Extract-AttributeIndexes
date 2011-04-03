@@ -37,6 +37,7 @@ Revision history for Search-GIN-Extract-AttributeIndexes
  - Add generated tests: CPANChanges, EOL, Kwalitee, DistMeta,
    ReportVersions::Tiny, Compile.
  - Add gitignore.
+ - Add weaver.ini
 
 0.01000011 2009-08-25T09:57:18Z
  - First version.
