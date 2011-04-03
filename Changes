@@ -1,5 +1,10 @@
 Revision history for {{$dist->name}}
+Revision history for Search-GIN-Extract-AttributeIndexes
 
 {{$NEXT}}
-          First version.
+ [Packaging]
+ - Update toolchain.
+ - Remove hand-coded xt/kwalitee and xt/critic tests.
 
+0.01000011 2009-08-25 09:57:18 UTC
+          First version.
