@@ -1,6 +1,8 @@
 Revision history for Search-GIN-Extract-AttributeIndexes
 
 {{$NEXT}}
+
+1.0.0 2011-04-03T19:19:59Z
  [Packaging]
  - Migrating to x.y.z spec only.
 
