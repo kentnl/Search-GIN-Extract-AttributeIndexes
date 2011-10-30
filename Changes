@@ -1,5 +1,24 @@
 Revision history for Search-GIN-Extract-AttributeIndexes
 
+1.0.1 2011-10-30T04:46:17Z
+ - Maintenance release
+
+ [Dependencies]
+ - new: depend on perl 5.10 for x.y.z versions.
+ - removed: test requires English
+ - new: runtime requires strict
+ - new: runtime requires warnings
+
+ [Internals]
+ - VERSION no longer set in BUILD
+ - now exports AUTHORITY variable
+
+ [Packaging]
+ - Update License ( Indentation/Address )
+ - release/author tests moved to xt/
+ - MetaData uri's now point to https://
+ - Now uses x_authority
+
 1.0.0 2011-04-03T19:19:59Z
  [Packaging]
  - Migrating to x.y.z spec only.

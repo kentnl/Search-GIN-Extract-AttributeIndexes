@@ -3,7 +3,10 @@ use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
 BEGIN {
-  $Search::GIN::Extract::AttributeIndexes::VERSION = '1.0.0';
+  $Search::GIN::Extract::AttributeIndexes::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Search::GIN::Extract::AttributeIndexes::VERSION = '1.0.1';
 }
 
 use Moose;
@@ -47,7 +50,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 =head1 VERSION
 
-version 1.0.0
+version 1.0.1
 
 =head1 SYNOPSIS
 

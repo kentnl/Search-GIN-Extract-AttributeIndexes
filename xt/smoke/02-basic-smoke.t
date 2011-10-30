@@ -1,16 +1,8 @@
 
-BEGIN {
-  unless ($ENV{AUTOMATED_TESTING}) {
-    require Test::More;
-    Test::More::plan(skip_all => 'these tests are for "smoke bot" testing');
-  }
-}
-
-
 use strict;
 use warnings;
 
-use Test::More tests => (100*100);
+use Test::More tests => ( 100 * 100 );
 
 {
 
@@ -50,35 +42,34 @@ use Test::More tests => (100*100);
 }
 
 sub chars {
-  join '', map { chr(rand(255)) } 0..30;
+  join '', map { chr( rand(255) ) } 0 .. 30;
 }
-
 
 use Search::GIN::Extract::AttributeIndexes;
 use Data::Dump qw( dump );
 
-for ( 1 .. 100 ){
+for ( 1 .. 100 ) {
 
   my $extractor = Search::GIN::Extract::AttributeIndexes->new();
 
-  item: for ( 1 .. 100 ){
-    my ( $name , $pass );
+item: for ( 1 .. 100 ) {
+    my ( $name, $pass );
     $name = chars();
     $pass = chars();
 
     my $model = Model->new( name => $name, password => $pass );
     my @results;
-    @results = $extractor->extract_values( $model );
+    @results = $extractor->extract_values($model);
     my $found = {};
-    my $fail = 0;
+    my $fail  = 0;
 
-    result: for ( @results ){
-      if ( $_ =~ /^id:(\d+)$/ ){
+  result: for (@results) {
+      if ( $_ =~ /^id:(\d+)$/ ) {
         $fail++ if exists $found->{'id'};
         $found->{id} = $1;
         next result;
       }
-      if ( $_ =~ /^name:(.*$)/s ){
+      if ( $_ =~ /^name:(.*$)/s ) {
         $fail++ if exists $found->{'name'};
         $found->{name} = $1;
         next result;
@@ -86,18 +77,18 @@ for ( 1 .. 100 ){
       $fail++;
     }
 
-    if( $fail ){
-      ok(0, "Data Structure returned too many items or badly identified items");
+    if ($fail) {
+      ok( 0, "Data Structure returned too many items or badly identified items" );
       diag( \@results );
       next;
     }
-    if( $found->{'id'} eq $model->id && $found->{'name'} eq $model->name ){
-      ok(1, "Datastructure collects properly");
+    if ( $found->{'id'} eq $model->id && $found->{'name'} eq $model->name ) {
+      ok( 1, "Datastructure collects properly" );
       next;
     }
-    ok(0, "Datastructure and model diverge");
+    ok( 0, "Datastructure and model diverge" );
     diag( 'harvested', dump $found );
-    diag( 'model', dump $model );
-    diag( 'result', dump \@results );
+    diag( 'model',     dump $model );
+    diag( 'result',    dump \@results );
   }
 }
