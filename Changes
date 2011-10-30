@@ -1,6 +1,8 @@
 Revision history for Search-GIN-Extract-AttributeIndexes
 
 {{$NEXT}}
+ - Maintenance release
+
  [Dependencies]
  - new: depend on perl 5.10 for x.y.z versions.
  - removed: test requires English
