@@ -1,0 +1,69 @@
+Revision history for Search-GIN-Extract-AttributeIndexes
+
+1.0.2 2013-04-06T04:15:32Z
+
+1.0.1 2011-10-30T04:46:17Z
+ - Maintenance release
+
+ [Dependencies]
+ - new: depend on perl 5.10 for x.y.z versions.
+ - removed: test requires English
+ - new: runtime requires strict
+ - new: runtime requires warnings
+
+ [Internals]
+ - VERSION no longer set in BUILD
+ - now exports AUTHORITY variable
+
+ [Packaging]
+ - Update License ( Indentation/Address )
+ - release/author tests moved to xt/
+ - MetaData uri's now point to https://
+ - Now uses x_authority
+
+1.0.0 2011-04-03T19:19:59Z
+ [Packaging]
+ - Migrating to x.y.z spec only.
+
+0.01059819 2011-04-03T17:39:44Z
+ [Dependencies::Build]
+ - Now mandates Module::Build 0.3601
+
+ [Dependencies::Devel]
+ - Advertises Bundle information in META.
+
+ [Dependencies::Runtime]
+ - Adds Carp
+ - Adds Scalar::Util
+ - Adds Search::GIN::Extract::Callback
+ - Drops Search::GIN
+ - Drops Test::use::ok
+ - Drops MooseX::AttributeIndexes
+ - Drops MooseX::Types
+ - Drops Test::More
+
+ [Dependencies::Test]
+ - Adds Test::More 0.96
+ - Adds MooseX::Types::Moose
+ - Adds Data::Dump
+ - Adds English
+ - Adds File::Find
+ - Adds File::Temp
+ - Adds MooseX::AttributeIndexes
+
+ [Packaging]
+ - Update toolchain.
+ - Use @Author::KENTNL
+ - Remove hand-coded xt/kwalitee and xt/critic and load tests.
+ - Ship .perltidyrc
+ - Rename perlcriticrc to perlcritic.rc
+ - Update Copyright licenses.
+ - No longer ship EUMM build.
+ - Add generated tests: CPANChanges, EOL, Kwalitee, DistMeta,
+   ReportVersions::Tiny, Compile.
+ - Add gitignore.
+ - Add weaver.ini
+
+0.01000011 2009-08-25T09:57:18Z
+ - First version.
+
