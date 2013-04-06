@@ -1,6 +1,6 @@
 ﻿Revision history for Search-GIN-Extract-AttributeIndexes
 
-1.0.2 2013-04-06T04:30:54Z
+1.0.2 2013-04-06T04:32:23Z
  - Maintenace Release for Module::Build 0.4004
 
  [Dependencies::Added / develop_requires]
@@ -37,7 +37,7 @@
  [Packaging]
  - Utilises new test_requires of Module::Build
 
-1.0.2 2013-04-06T04:30:54Z
+1.0.2 2013-04-06T04:32:23Z
 
 1.0.1 2011-10-30T04:46:17Z
  - Maintenance release
