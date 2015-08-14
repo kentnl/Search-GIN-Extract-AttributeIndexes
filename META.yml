@@ -36,7 +36,7 @@ requires:
   strict: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/kentfredric/Search-GIN-Extract-AttributeIndexes/issues
-  homepage: https://github.com/kentfredric/Search-GIN-Extract-AttributeIndexes
-  repository: https://github.com/kentfredric/Search-GIN-Extract-AttributeIndexes.git
+  bugtracker: https://github.com/kentnl/Search-GIN-Extract-AttributeIndexes/issues
+  homepage: https://github.com/kentnl/Search-GIN-Extract-AttributeIndexes
+  repository: https://github.com/kentnl/Search-GIN-Extract-AttributeIndexes.git
 version: '2.000000'
