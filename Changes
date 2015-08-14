@@ -1,12 +1,22 @@
 ﻿Revision history for Search-GIN-Extract-AttributeIndexes
 
-1.0.3 2015-08-14T11:39:50Z
+2.000000 2015-08-14T13:12:53Z 27279f0
+ [01 - Version Scheme Changed]
+ - Packaging now standardised on x.yyyzzz
+ - This is the primary reason for the 2.x on the box.
+ - https://questhub.io/realm/perl/quest/5388d3a9bbd0be2224000129
+
+ [02 - Installer Tooling Changed]
+ - ExtUtils::MakeMaker is now the installer toolkit for this dist.
+ - https://questhub.io/realm/perl/quest/5388cc12bbd0be5b2500011f
+
  [Dependencies::Stats]
  - Dependencies changed since 1.0.2, see misc/*.deps* for details
- - build: ↓1
- - configure: ↓1
- - develop: +4
- - test: +4 ↑1 -2
+ - build: -1
+ - configure: +2 -1 (recommends: +1)
+ - develop: +54 -2 (recommends: +1 -1, suggests: +1 ↑1)
+ - runtime: (recommends: +1)
+ - test: +3 ↓1 -2 (recommends: +3)
 
 1.0.2 2013-04-06T04:32:43Z
  - Maintenace Release for Module::Build 0.4004

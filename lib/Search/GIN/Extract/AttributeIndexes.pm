@@ -2,16 +2,65 @@ use strict;
 use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
-our $AUTHORITY = 'cpan:KENTNL';
-$Search::GIN::Extract::AttributeIndexes::VERSION = '1.0.3';
+
+our $VERSION = '2.000000';
+
 use Moose;
 
 # ABSTRACT: Automatically collect index metadata from MooseX::AttributeIndexes consuming models.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Scalar::Util qw(blessed reftype);
 use Carp;
 extends 'Search::GIN::Extract::Callback';
 use namespace::autoclean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 has '+extract' => (
@@ -39,13 +88,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata from MooseX::AttributeIndexes consuming models.
 
 =head1 VERSION
 
-version 1.0.3
+version 2.000000
 
 =head1 SYNOPSIS
 
@@ -99,7 +150,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Kent Fredric.
+This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
