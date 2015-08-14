@@ -83,4 +83,14 @@ sub _extract_object {
     )
   );
 
+=head1 DESCRIPTION
+
+This module is an extension for the C<Search::GIN> search and index framework
+which allows one to operate objects of any class consuming
+C<MooseX::AttributeIndexes>, and extracting values from those objects for use
+in indexing.
+
+This allows people to define how an object should be indexed on the class
+definition itself by adding properties to attributes.
+
 =cut
