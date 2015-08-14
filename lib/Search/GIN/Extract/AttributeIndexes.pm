@@ -13,6 +13,7 @@ use Moose qw( has extends );
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Scalar::Util qw(blessed reftype);
+use Safe::Isa qw( $_does );
 use Carp;
 extends 'Search::GIN::Extract::Callback';
 use namespace::autoclean;
@@ -71,9 +72,7 @@ __PACKAGE__->meta->make_immutable;
 
 sub _extract_object {
   my ( $cache_object, ) = @_;
-  return {} unless blessed $cache_object;
-  return {} unless $cache_object->can('does');
-  return {} unless $cache_object->does('MooseX::AttributeIndexes::Provider');
+  return {} unless $cache_object->$_does('MooseX::AttributeIndexes::Provider');
   my $result = $cache_object->attribute_indexes;
   if ( reftype $result ne 'HASH' ) {
     Carp::croak(
