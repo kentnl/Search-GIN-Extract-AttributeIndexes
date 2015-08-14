@@ -3,9 +3,13 @@ use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
 
+our $VERSION = '2.000000';
+
 use Moose;
 
 # ABSTRACT: Automatically collect index metadata from MooseX::AttributeIndexes consuming models.
+
+# AUTHORITY
 
 use Scalar::Util qw(blessed reftype);
 use Carp;

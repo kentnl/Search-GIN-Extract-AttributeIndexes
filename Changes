@@ -1,6 +1,11 @@
 ﻿Revision history for Search-GIN-Extract-AttributeIndexes
 
 {{$NEXT}}
+ [01 - Version Scheme Changed]
+ - Packaging now standardised on x.yyyzzz
+ - This is the primary reason for the 2.x on the box.
+ - https://questhub.io/realm/perl/quest/5388d3a9bbd0be2224000129
+
  [Dependencies::Stats]
  - Dependencies changed since 1.0.2, see misc/*.deps* for details
  - build: ↑1

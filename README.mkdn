@@ -4,7 +4,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 # VERSION
 
-version 1.0.3
+version 2.000000
 
 # SYNOPSIS
 
