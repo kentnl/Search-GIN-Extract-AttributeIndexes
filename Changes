@@ -1,6 +1,6 @@
 ﻿Revision history for Search-GIN-Extract-AttributeIndexes
 
-2.000000 2015-08-14T13:16:19Z 38763a7
+2.000000 2015-08-14T13:17:38Z 6aea400
  [01 - Version Scheme Changed]
  - Packaging now standardised on x.yyyzzz
  - This is the primary reason for the 2.x on the box.
