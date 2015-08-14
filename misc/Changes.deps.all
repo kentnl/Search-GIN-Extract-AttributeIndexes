@@ -73,6 +73,9 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  [Added / runtime recommends]
  - Moose 2.000
 
+ [Added / runtime requires]
+ - Safe::Isa
+
  [Added / test recommends]
  - CPAN::Meta 2.120900
  - ExtUtils::MakeMaker 7.00
