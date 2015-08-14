@@ -89,7 +89,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::NextVersion:
           first_version: 0.1.0
           version_by_branch: '0'
-          version_regexp: (?^:^(.*)-source$)
+          version_regexp: (?^u:^(.*)-source$)
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::KENTNL/Git::NextVersion'

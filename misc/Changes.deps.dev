@@ -1,6 +1,11 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
 1.0.3
+ [Added / develop requires]
+ - Test::CPAN::Changes 0.19
+ - Test::EOL
+ - Test::Kwalitee 1.21
+ - Test::More 1.001014
 
 1.0.2 2013-04-06T04:32:43Z
  [Added / develop requires]
