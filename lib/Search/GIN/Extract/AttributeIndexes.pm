@@ -78,8 +78,8 @@ has '+extract' => (
         return {};
       }
       return $result;
-      }
-  }
+    };
+  },
 );
 
 no Moose;
