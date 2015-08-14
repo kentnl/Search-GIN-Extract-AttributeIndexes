@@ -2,13 +2,8 @@ use strict;
 use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
-BEGIN {
-  $Search::GIN::Extract::AttributeIndexes::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Search::GIN::Extract::AttributeIndexes::VERSION = '1.0.2';
-}
-
+our $AUTHORITY = 'cpan:KENTNL';
+$Search::GIN::Extract::AttributeIndexes::VERSION = '1.0.3';
 use Moose;
 
 # ABSTRACT: Automatically collect index metadata from MooseX::AttributeIndexes consuming models.
@@ -50,7 +45,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 =head1 VERSION
 
-version 1.0.2
+version 1.0.3
 
 =head1 SYNOPSIS
 
@@ -104,7 +99,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2015 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

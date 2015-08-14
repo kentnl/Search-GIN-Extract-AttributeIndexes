@@ -1,29 +1,16 @@
 ﻿Revision history for Search-GIN-Extract-AttributeIndexes
 
+1.0.3 2015-08-14T11:38:08Z
+
 1.0.2 2013-04-06T04:32:43Z
  - Maintenace Release for Module::Build 0.4004
 
- [Dependencies::Added / develop_requires]
- - Pod::Coverage::TrustPod
- - Test::CPAN::Meta
- - Test::Pod 1.41
- - Test::Pod::Coverage 1.08
- - version 0.9901
-
- [Dependencies::Changed / build requires]
- - Module::Build 0.3601 → 0.4004
-
- [Dependencies::Changed / configure requires]
- - Module::Build 0.3601 → 0.4004
-
- [Dependencies::Changed / develop recommends]
- - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803 → v1.3.0
-
- [Dependencies::Changed / develop_suggests]
- - Dist::Zilla::PluginBundle::Author::KENTNL v1.0.0 → v1.7.2
-
- [Dependencies::Changed / test_requires]
- - Test::More 0.96 → 0.98
+ [Dependencies::Stats]
+ - Dependencies changed since 1.0.1, see misc/*.deps* for details
+ - build: ↑1
+ - configure: ↑1
+ - develop: +5 (recommends: ↑1, suggests: ↑1)
+ - test: ↑1
 
  [Documentation]
  - Update copyright year
@@ -37,16 +24,13 @@
  [Packaging]
  - Utilises new test_requires of Module::Build
 
-1.0.2 2013-04-06T04:32:43Z
-
 1.0.1 2011-10-30T04:46:17Z
  - Maintenance release
 
- [Dependencies]
- - new: depend on perl 5.10 for x.y.z versions.
- - removed: test requires English
- - new: runtime requires strict
- - new: runtime requires warnings
+ [Dependencies::Stats]
+ - Dependencies changed since 1.0.0, see misc/*.deps* for details
+ - runtime: +3
+ - test: -1
 
  [Internals]
  - VERSION no longer set in BUILD
@@ -63,30 +47,13 @@
  - Migrating to x.y.z spec only.
 
 0.01059819 2011-04-03T17:39:44Z
- [Dependencies::Build]
- - Now mandates Module::Build 0.3601
-
- [Dependencies::Devel]
- - Advertises Bundle information in META.
-
- [Dependencies::Runtime]
- - Adds Carp
- - Adds Scalar::Util
- - Adds Search::GIN::Extract::Callback
- - Drops Search::GIN
- - Drops Test::use::ok
- - Drops MooseX::AttributeIndexes
- - Drops MooseX::Types
- - Drops Test::More
-
- [Dependencies::Test]
- - Adds Test::More 0.96
- - Adds MooseX::Types::Moose
- - Adds Data::Dump
- - Adds English
- - Adds File::Find
- - Adds File::Temp
- - Adds MooseX::AttributeIndexes
+ [Dependencies::Stats]
+ - Dependencies changed since 0.01000011, see misc/*.deps* for details
+ - build: +1
+ - configure: +1
+ - develop: +1 (recommends: +1, suggests: +1)
+ - runtime: +3 ↓2 -5
+ - test: +7
 
  [Packaging]
  - Update toolchain.
@@ -96,11 +63,9 @@
  - Rename perlcriticrc to perlcritic.rc
  - Update Copyright licenses.
  - No longer ship EUMM build.
- - Add generated tests: CPANChanges, EOL, Kwalitee, DistMeta,
-   ReportVersions::Tiny, Compile.
+ - Add generated tests: CPANChanges, EOL, Kwalitee, DistMeta, ReportVersions::Tiny, Compile.
  - Add gitignore.
  - Add weaver.ini
 
 0.01000011 2009-08-25T09:57:18Z
  - First version.
-
