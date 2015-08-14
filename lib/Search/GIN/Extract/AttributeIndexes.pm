@@ -64,25 +64,23 @@ use namespace::autoclean;
   );
 =cut
 
-has '+extract' => (
-  default => sub {
-    sub {
-      my ( $cache_object, ) = @_;
-      return {} unless blessed $cache_object;
-      return {} unless $cache_object->can('does');
-      return {} unless $cache_object->does('MooseX::AttributeIndexes::Provider');
-      my $result = $cache_object->attribute_indexes;
-      if ( reftype $result ne 'HASH' ) {
-        Carp::croak(
-          'the method \'attribute_indexes\' on the class ' . $cache_object->meta->name . ' Does not return an array ref.' );
-        return {};
-      }
-      return $result;
-    };
-  },
-);
+has '+extract' => ( default => sub { return \&_extract_object }, );
 
 no Moose;
 __PACKAGE__->meta->make_immutable;
-1;
 
+sub _extract_object {
+  my ( $cache_object, ) = @_;
+  return {} unless blessed $cache_object;
+  return {} unless $cache_object->can('does');
+  return {} unless $cache_object->does('MooseX::AttributeIndexes::Provider');
+  my $result = $cache_object->attribute_indexes;
+  if ( reftype $result ne 'HASH' ) {
+    Carp::croak(
+      'the method \'attribute_indexes\' on the class ' . $cache_object->meta->name . ' Does not return an array ref.' );
+    return {};
+  }
+  return $result;
+}
+
+1;
