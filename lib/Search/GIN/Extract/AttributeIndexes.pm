@@ -67,13 +67,14 @@ use namespace::autoclean;
 has '+extract' => (
   default => sub {
     sub {
-      my ( $object, $self, @args ) = @_;
-      return {} unless blessed $object;
-      return {} unless $object->can('does');
-      return {} unless $object->does('MooseX::AttributeIndexes::Provider');
-      my $result = $object->attribute_indexes;
+      my ( $cache_object, $self, @args ) = @_;
+      return {} unless blessed $cache_object;
+      return {} unless $cache_object->can('does');
+      return {} unless $cache_object->does('MooseX::AttributeIndexes::Provider');
+      my $result = $cache_object->attribute_indexes;
       if ( reftype $result ne 'HASH' ) {
-        Carp::croak( 'the method \'attribute_indexes\' on the class ' . $object->meta->name . ' Does not return an array ref.' );
+        Carp::croak(
+          'the method \'attribute_indexes\' on the class ' . $cache_object->meta->name . ' Does not return an array ref.' );
         return {};
       }
       return $result;
