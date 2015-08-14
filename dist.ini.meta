@@ -24,7 +24,7 @@ srcreadme = mkdn
 ;version_rel_time_zone = Pacific/Auckland
 
 [Prereqs]
-perl = 5.010000
+;perl = 5.010000
 ;Moose = 0.89
 ;MooseX::Types::Moose = 0
 ;namespace::autoclean = 0.08
