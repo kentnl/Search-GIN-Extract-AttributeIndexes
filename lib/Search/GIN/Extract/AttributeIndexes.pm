@@ -1,48 +1,47 @@
+use 5.006;    # our
 use strict;
 use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
-BEGIN {
-  $Search::GIN::Extract::AttributeIndexes::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Search::GIN::Extract::AttributeIndexes::VERSION = '1.0.2';
-}
 
-use Moose;
+our $VERSION = '2.000000';
+
+use Moose qw( has extends );
 
 # ABSTRACT: Automatically collect index metadata from MooseX::AttributeIndexes consuming models.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Scalar::Util qw(blessed reftype);
+use Safe::Isa qw( $_does );
 use Carp;
 extends 'Search::GIN::Extract::Callback';
 use namespace::autoclean;
 
-
-has '+extract' => (
-  default => sub {
-    sub {
-      my ( $object, $self, @args ) = @_;
-      return {} unless blessed $object;
-      return {} unless $object->can('does');
-      return {} unless $object->does('MooseX::AttributeIndexes::Provider');
-      my $result = $object->attribute_indexes;
-      if ( reftype $result ne 'HASH' ) {
-        Carp::croak( 'the method \'attribute_indexes\' on the class ' . $object->meta->name . ' Does not return an array ref.' );
-        return {};
-      }
-      return $result;
-      }
-  }
-);
+has '+extract' => ( default => sub { return \&_extract_object }, );
 
 no Moose;
 __PACKAGE__->meta->make_immutable;
+
+sub _extract_object {
+  my ( $cache_object, ) = @_;
+  return {} unless $cache_object->$_does('MooseX::AttributeIndexes::Provider');
+  my $result = $cache_object->attribute_indexes;
+  if ( reftype $result ne 'HASH' ) {
+    Carp::croak(
+      'the method \'attribute_indexes\' on the class ' . $cache_object->meta->name . ' Does not return an array ref.' );
+    return {};
+  }
+  return $result;
+}
+
 1;
 
 __END__
 
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -50,7 +49,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 =head1 VERSION
 
-version 1.0.2
+version 2.000000
 
 =head1 SYNOPSIS
 
@@ -98,13 +97,23 @@ version 1.0.2
     )
   );
 
+=head1 DESCRIPTION
+
+This module is an extension for the C<Search::GIN> search and index framework
+which allows one to operate objects of any class consuming
+C<MooseX::AttributeIndexes>, and extracting values from those objects for use
+in indexing.
+
+This allows people to define how an object should be indexed on the class
+definition itself by adding properties to attributes.
+
 =head1 AUTHOR
 
 Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

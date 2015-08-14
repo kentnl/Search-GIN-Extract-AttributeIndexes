@@ -1,58 +1,34 @@
-NAME
-    Search::GIN::Extract::AttributeIndexes - Automatically collect index
-    metadata from MooseX::AttributeIndexes consuming models.
+Search::GIN::Extract::AttributeIndexes
 
-VERSION
-    version 1.0.2
+This module is an extension for the "Search::GIN" search and index
+framework which allows one to operate objects of any class consuming
+"MooseX::AttributeIndexes", and extracting values from those objects for
+use in indexing.
 
-SYNOPSIS
-  On your models
-      use MooseX::Declare;
+This allows people to define how an object should be indexed on the
+class definition itself by adding properties to attributes.
 
-      class Model::Item {
-        use MooseX::Types::Moose qw(:all ):
-        use MooseX::AttributeIndexes;
+INSTALLATION
 
-        has 'attr' => (
-          isa => Str,
-          is => 'rw',
-          indexed => 1
-        );
-        has 'attr_bar' => (
-          isa => Str,
-          is => 'rw',
-          primary_index => 1
-        );
-      }
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-  In KiokuX::Model extensions
-      use MooseX::Declare;
+  cpanm .
+  cpan  .
+  cpanp -i .
 
-      class Foo extends KiokuX::Model {
-        use Search::GIN::Extract::AttributeIndexes;
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
-        around _build_connect_args ( Any @args ) {
-
-          my $args = $self->$orig( @args );
-          push @{ $args }, extract => Search::GIN::Extract::AttributeIndexes->new();
-          return $args;
-
-        }
-      }
-
-  In Instantiations of KiokuDB
-      my $dir = KiouDB->new(
-        backend => KiokuDB::Backend::BDB::GIN->new(
-          extract => Search::GIN::Extract::AttributeIndexes->new()
-        )
-      );
-
-AUTHOR
-    Kent Fredric <kentnl@cpan.org>
+  perl Makefile.PL
+  make
+  make test
+  make install
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Kent Fredric.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+This software is copyright (c) 2015 by Kent Fredric
+<kentfredric@gmail.com>.
 
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
