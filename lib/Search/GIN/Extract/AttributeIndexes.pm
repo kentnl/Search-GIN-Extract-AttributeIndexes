@@ -18,6 +18,25 @@ use Carp;
 extends 'Search::GIN::Extract::Callback';
 use namespace::autoclean;
 
+has '+extract' => ( default => sub { return \&_extract_object }, );
+
+no Moose;
+__PACKAGE__->meta->make_immutable;
+
+sub _extract_object {
+  my ( $cache_object, ) = @_;
+  return {} unless $cache_object->$_does('MooseX::AttributeIndexes::Provider');
+  my $result = $cache_object->attribute_indexes;
+  if ( reftype $result ne 'HASH' ) {
+    Carp::croak(
+      'the method \'attribute_indexes\' on the class ' . $cache_object->meta->name . ' Does not return an array ref.' );
+    return {};
+  }
+  return $result;
+}
+
+1;
+
 =head1 SYNOPSIS
 
 =head2 On your models
@@ -63,23 +82,5 @@ use namespace::autoclean;
       extract => Search::GIN::Extract::AttributeIndexes->new()
     )
   );
+
 =cut
-
-has '+extract' => ( default => sub { return \&_extract_object }, );
-
-no Moose;
-__PACKAGE__->meta->make_immutable;
-
-sub _extract_object {
-  my ( $cache_object, ) = @_;
-  return {} unless $cache_object->$_does('MooseX::AttributeIndexes::Provider');
-  my $result = $cache_object->attribute_indexes;
-  if ( reftype $result ne 'HASH' ) {
-    Carp::croak(
-      'the method \'attribute_indexes\' on the class ' . $cache_object->meta->name . ' Does not return an array ref.' );
-    return {};
-  }
-  return $result;
-}
-
-1;
