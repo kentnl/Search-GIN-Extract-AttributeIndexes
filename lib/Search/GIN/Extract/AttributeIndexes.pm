@@ -67,7 +67,7 @@ use namespace::autoclean;
 has '+extract' => (
   default => sub {
     sub {
-      my ( $cache_object, $self, @args ) = @_;
+      my ( $cache_object, ) = @_;
       return {} unless blessed $cache_object;
       return {} unless $cache_object->can('does');
       return {} unless $cache_object->does('MooseX::AttributeIndexes::Provider');
