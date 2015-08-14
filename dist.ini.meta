@@ -7,6 +7,9 @@ copyright_holder = Kent Fredric
 bumpversions = 1
 normal_form = numify
 mantissa = 6
+toolkit = eumm
+toolkit_hardness = soft
+srcreadme = mkdn
 
 ;version_major  = 0
 ;version_minor  = 1

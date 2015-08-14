@@ -1,6 +1,9 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
 2.000000
+ [Added / develop recommends]
+ - Test::More 0.99
+
  [Added / develop requires]
  - Dist::Zilla 5
  - Dist::Zilla::Plugin::Author::KENTNL::CONTRIBUTING 0.001003
@@ -20,6 +23,7 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
  - Dist::Zilla::Plugin::Git::Tag
  - Dist::Zilla::Plugin::GithubMeta
  - Dist::Zilla::Plugin::License
+ - Dist::Zilla::Plugin::MakeMaker
  - Dist::Zilla::Plugin::Manifest
  - Dist::Zilla::Plugin::ManifestSkip
  - Dist::Zilla::Plugin::MetaConfig
@@ -29,13 +33,11 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
  - Dist::Zilla::Plugin::MetaTests
  - Dist::Zilla::Plugin::MetaYAML::Minimal
  - Dist::Zilla::Plugin::MinimumPerl
- - Dist::Zilla::Plugin::ModuleBuild
  - Dist::Zilla::Plugin::PodCoverageTests
  - Dist::Zilla::Plugin::PodSyntaxTests
  - Dist::Zilla::Plugin::PodWeaver
  - Dist::Zilla::Plugin::Prereqs
  - Dist::Zilla::Plugin::Prereqs::AuthorDeps
- - Dist::Zilla::Plugin::Prereqs::MatchInstalled
  - Dist::Zilla::Plugin::Prereqs::Recommend::MatchInstalled
  - Dist::Zilla::Plugin::Prereqs::Upgrade
  - Dist::Zilla::Plugin::Readme::Brief
@@ -56,7 +58,7 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
  - Test::CPAN::Changes 0.19
  - Test::EOL
  - Test::Kwalitee 1.21
- - Test::More 1.001014
+ - Test::More 0.88
 
  [Added / develop suggests]
  - Dist::Zilla::App::Command::bakeini 0.002005
