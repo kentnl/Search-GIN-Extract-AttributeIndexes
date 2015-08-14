@@ -9,7 +9,7 @@ build_requires:
   MooseX::AttributeIndexes: '0'
   MooseX::Types::Moose: '0'
   Test::More: '0.96'
-  perl: '5.010000'
+  perl: '5.006'
 configure_requires:
   ExtUtils::MakeMaker: '0'
   perl: '5.006'
@@ -32,7 +32,7 @@ requires:
   Scalar::Util: '0'
   Search::GIN::Extract::Callback: '0'
   namespace::autoclean: '0'
-  perl: '5.010000'
+  perl: '5.006'
   strict: '0'
   warnings: '0'
 resources:
