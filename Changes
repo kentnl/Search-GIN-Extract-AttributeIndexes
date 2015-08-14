@@ -1,6 +1,12 @@
 ﻿Revision history for Search-GIN-Extract-AttributeIndexes
 
 {{$NEXT}}
+ [Dependencies::Stats]
+ - Dependencies changed since 1.0.2, see misc/*.deps* for details
+ - build: ↓1
+ - configure: ↓1
+ - develop: +4
+ - test: +4 ↑1 -2
 
 1.0.2 2013-04-06T04:32:43Z
  - Maintenace Release for Module::Build 0.4004
