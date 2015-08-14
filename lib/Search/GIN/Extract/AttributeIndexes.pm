@@ -6,7 +6,7 @@ package Search::GIN::Extract::AttributeIndexes;
 
 our $VERSION = '2.000000';
 
-use Moose;
+use Moose qw( has extends );
 
 # ABSTRACT: Automatically collect index metadata from MooseX::AttributeIndexes consuming models.
 
