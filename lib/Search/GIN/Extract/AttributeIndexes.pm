@@ -19,52 +19,6 @@ extends 'Search::GIN::Extract::Callback';
 use namespace::autoclean;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 has '+extract' => ( default => sub { return \&_extract_object }, );
 
 no Moose;
