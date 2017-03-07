@@ -1,6 +1,11 @@
 ﻿Revision history for Search-GIN-Extract-AttributeIndexes
 
 {{$NEXT}}
+ - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
+
+ [Dependencies::Stats]
+ - Dependencies changed since 2.000000, see misc/*.deps* for details
+ - develop: +6 ↑2 (suggests: ↑2)
 
 2.000000 2015-08-14T13:59:13Z 4c0d0ab
  [01 - Version Scheme Changed]
