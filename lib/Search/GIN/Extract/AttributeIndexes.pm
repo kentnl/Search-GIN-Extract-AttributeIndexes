@@ -4,7 +4,7 @@ use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 use Moose qw( has extends );
 
@@ -49,7 +49,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 =head1 VERSION
 
-version 2.000001
+version 2.000002
 
 =head1 SYNOPSIS
 
