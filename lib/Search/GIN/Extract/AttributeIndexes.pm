@@ -4,7 +4,7 @@ use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
 
-our $VERSION = '2.000000';
+our $VERSION = '2.000001';
 
 use Moose qw( has extends );
 
@@ -49,7 +49,7 @@ Search::GIN::Extract::AttributeIndexes - Automatically collect index metadata fr
 
 =head1 VERSION
 
-version 2.000000
+version 2.000001
 
 =head1 SYNOPSIS
 
@@ -113,7 +113,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

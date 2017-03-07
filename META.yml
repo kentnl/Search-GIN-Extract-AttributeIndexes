@@ -14,7 +14,7 @@ configure_requires:
   ExtUtils::MakeMaker: '0'
   perl: '5.006'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.037, CPAN::Meta::Converter version 2.150005'
+generated_by: 'Dist::Zilla version 6.009, CPAN::Meta::Converter version 2.150010'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,7 +23,7 @@ name: Search-GIN-Extract-AttributeIndexes
 provides:
   Search::GIN::Extract::AttributeIndexes:
     file: lib/Search/GIN/Extract/AttributeIndexes.pm
-    version: '2.000000'
+    version: '2.000001'
 recommends:
   Moose: '2.000'
 requires:
@@ -40,4 +40,4 @@ resources:
   bugtracker: https://github.com/kentnl/Search-GIN-Extract-AttributeIndexes/issues
   homepage: https://github.com/kentnl/Search-GIN-Extract-AttributeIndexes
   repository: https://github.com/kentnl/Search-GIN-Extract-AttributeIndexes.git
-version: '2.000000'
+version: '2.000001'
