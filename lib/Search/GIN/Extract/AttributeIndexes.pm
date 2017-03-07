@@ -4,7 +4,7 @@ use warnings;
 
 package Search::GIN::Extract::AttributeIndexes;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 use Moose qw( has extends );
 
